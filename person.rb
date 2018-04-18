@@ -15,4 +15,5 @@ class Person
   def remove_cards
     @cards = []
   end
+
 end

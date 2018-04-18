@@ -8,6 +8,3 @@ require_relative 'logic'
 require_relative 'game'
 
 Controller.new(Menu.new, Logic.new).start
-
-puts 'До следующих встреч!'
-

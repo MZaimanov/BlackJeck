@@ -1,7 +1,7 @@
 class Menu
   def ask_name
     puts 'Рады Вас видеть! Как вас зовут?'
-    gets.chomp
+    @name = gets.chomp
   end
 
   def greeting(user_name)
@@ -40,13 +40,19 @@ class Menu
     p "Выигрышь: #{bank}"
   end
 
+  def game_over
+    puts 'У Вас закончились деньги'
+    puts 'До скорых встреч!'
+    exit(0)
+  end
+
   def continue?
     puts 'Продолжить игру?'
     puts '1 - Да!'
     puts '0 - Нет.'
     puts 'Сделайте свой выбор: '
     return true if gets.chomp.to_i == 1
+    puts 'До следующих встреч!'
     false
-
   end
 end
